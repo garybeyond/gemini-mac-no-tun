@@ -22,7 +22,7 @@ Gemini 桌面版有两个网络栈：
 - macOS 13+ (Ventura 或更新)
 - 已安装官方 [Gemini.app](https://gemini.google.com/app/download/mac)
 - 已安装 [Clash Verge](https://github.com/clash-verge-rev/clash-verge-rev) 或兼容的 mihomo 客户端
-- Clash Verge 的混合代理端口为 `127.0.0.1:7890`(默认)
+- Clash Verge 的混合代理端口任意(包装 App 会自动检测实际端口)
 
 ## 安装
 
@@ -75,7 +75,7 @@ Gemini.app
 | 症状 | 可能原因 | 解决 |
 |---|---|---|
 | 卡在加载页，日志有 `Transport error: 86` | tun 路由未生效 | 运行 `sudo sh macos/gemini-tun-routes.sh --install` |
-| 日志有 `DEADLINE_EXCEEDED` | mihomo 未运行或端口不对 | 检查 Clash Verge 是否运行，混合端口是否为 7890 |
+| 日志有 `DEADLINE_EXCEEDED` | mihomo 未运行 | 检查 Clash Verge 是否运行 |
 | 其他 App 无法上网 | 误开了 Clash Verge 的 TUN 开关 | 在 Clash Verge 设置里关闭 TUN |
 | 重启后失效 | LaunchDaemon 未加载 | `sudo launchctl load -w /Library/LaunchDaemons/local.gemini.tun-routes.plist` |
 

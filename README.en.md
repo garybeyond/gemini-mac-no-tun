@@ -22,7 +22,7 @@ With only macOS system proxy or environment variables, the OAuth stack connects 
 - macOS 13+ (Ventura or newer)
 - Official [Gemini.app](https://gemini.google.com/app/download/mac) installed
 - [Clash Verge](https://github.com/clash-verge-rev/clash-verge-rev) or compatible mihomo client installed
-- Clash Verge mixed proxy port is `127.0.0.1:7890` (default)
+- Clash Verge mixed proxy port can be any value (the wrapper app auto-detects it)
 
 ## Installation
 
@@ -75,7 +75,7 @@ The wrapper app injects environment variables; the tun routing daemon handles th
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | Stuck on loading screen, log shows `Transport error: 86` | Tun routing not active | Run `sudo sh macos/gemini-tun-routes.sh --install` |
-| Log shows `DEADLINE_EXCEEDED` | mihomo not running or wrong port | Check if Clash Verge is running and mixed port is 7890 |
+| Log shows `DEADLINE_EXCEEDED` | mihomo not running | Check if Clash Verge is running |
 | Other apps can't access internet | Clash Verge TUN mode accidentally enabled | Disable TUN in Clash Verge settings |
 | Stops working after reboot | LaunchDaemon not loaded | `sudo launchctl load -w /Library/LaunchDaemons/local.gemini.tun-routes.plist` |
 
