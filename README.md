@@ -109,7 +109,7 @@ sudo route -n delete -inet -net 172.217.0.0/16 -interface utun1024 2>/dev/null
 
 ## 同类项目
 
-- [awesome-chatgpt-remote](https://github.com/garybeyond/awesome-chatgpt-remote) — ChatGPT 桌面版免 TUN 启动(同一作者，类似思路)
+- [awesome-chatgpt-remote](https://github.com/garybeyond/awesome-chatgpt-remote) — ChatGPT 桌面版免 TUN 启动(类似思路，解决同样的问题)
 
 ## 许可
 

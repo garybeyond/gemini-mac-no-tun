@@ -107,7 +107,7 @@ sudo route -n delete -inet -net 172.217.0.0/16 -interface utun1024 2>/dev/null
 
 ## Related projects
 
-- [awesome-chatgpt-remote](https://github.com/garybeyond/awesome-chatgpt-remote) — No-TUN launcher for ChatGPT desktop (same author, similar approach)
+- [awesome-chatgpt-remote](https://github.com/garybeyond/awesome-chatgpt-remote) — No-TUN launcher for ChatGPT desktop (similar approach)
 
 ## License
 
