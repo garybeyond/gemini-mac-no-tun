@@ -74,10 +74,12 @@ Gemini.app
 
 | 症状 | 可能原因 | 解决 |
 |---|---|---|
-| 卡在加载页，日志有 `Transport error: 86` | tun 路由未生效 | 运行 `sudo sh macos/gemini-tun-routes.sh --install` |
-| 日志有 `DEADLINE_EXCEEDED` | mihomo 未运行 | 检查 Clash Verge 是否运行 |
+| 卡在加载页/登录无反应/无法跳转回客户端 | tun 路由未生效，OAuth 栈直连 Google 超时 | 运行 `sudo sh macos/gemini-tun-routes.sh --install` |
+| 日志有 `Transport error: 86` 或 `DEADLINE_EXCEEDED` | mihomo 未运行 | 检查 Clash Verge 是否运行 |
 | 其他 App 无法上网 | 误开了 Clash Verge 的 TUN 开关 | 在 Clash Verge 设置里关闭 TUN |
 | 重启后失效 | LaunchDaemon 未加载 | `sudo launchctl load -w /Library/LaunchDaemons/local.gemini.tun-routes.plist` |
+
+> 如果你在 B 站、V2EX、linux.do 看到过"Gemini Mac 登录卡住"、"Gemini 桌面版无法跳转"之类的帖子——那就是这个问题。本工具解决的就是它。
 
 ## 卸载
 
